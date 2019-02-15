@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import Grid from 'react-bootstrap/Grid';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
 import styled from 'styled-components';
 
 import Header from './components/Header';
@@ -18,16 +16,26 @@ const HeaderWrapper = styled.header`
         opacity: 0.8;
 `
 
+const MenuWrapper = styled.div`
+        width: 100%;
+        height: 89px;
+        padding: 20px;
+`
+
 class App extends Component {
   render() {
     return (
         <div className='App'>
             <HeaderWrapper>
-                <Grid>
+                <Container>
                     <Header />
-                </Grid>
+                </Container>
             </HeaderWrapper>
-            <Menu />
+            <MenuWrapper>
+                <Container>
+                    <Menu />
+                </Container>
+            </MenuWrapper>
             <Main />
         </div>
     );
